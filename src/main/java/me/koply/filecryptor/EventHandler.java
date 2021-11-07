@@ -21,14 +21,14 @@ public class EventHandler {
     public static File selectedFile;
 
     public static final JFileChooser fileChooser = new JFileChooser();
-    public void browseButton(ActionEvent e) { // fuck you actionevent
+    public void browseButton(ActionEvent e) { // fuck you actionevent. todo: stop swearing
         int result = fileChooser.showDialog(frame, "Select File");
         if (result == JFileChooser.APPROVE_OPTION) {
             selectedFile = fileChooser.getSelectedFile();
             try {
                 GuiManager.filePath.setText(selectedFile.getCanonicalPath());
             } catch (IOException ioException) {
-                JOptionPane.showMessageDialog(frame, "An unexpected exception occured.", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(frame, "An unexpected exception occurred.", "Error", JOptionPane.ERROR_MESSAGE);
                 ioException.printStackTrace();
             }
         }

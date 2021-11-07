@@ -23,8 +23,8 @@ public class App {
     public static int Y;
 
     public void start() {
-        JFrame.setDefaultLookAndFeelDecorated( true );
-        JDialog.setDefaultLookAndFeelDecorated( true );
+        JFrame.setDefaultLookAndFeelDecorated(true);
+        JDialog.setDefaultLookAndFeelDecorated(true);
         FlatDarkPurpleIJTheme.install();
 
         KriFrame frame = new KriFrame();
